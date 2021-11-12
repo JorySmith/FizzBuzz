@@ -1,8 +1,8 @@
 # Project Name - A Coding Project
-Exec summary. A website template for JS coding projects.
+Exec summary.
 
 # Live Demo
-https://jorysmith.github.io/CodeProjectTemplate/
+https://jorysmith.github.io/FizzBuzz/
 
 # Description
 Description here.
