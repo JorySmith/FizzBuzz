@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #1d5888;
-    --secondary-color: #f2a22c;
+    --primary-color: #005FA6;
+    --secondary-color: #A6690F;
     --dark-color: #292929;
     --white-color: #ffffff;
 }
@@ -10,11 +10,11 @@ body {
 }
 
 nav {
-    background-color: var(--dark-color);
+    background-color: var(--secondary-color);
 }
 
 footer {
-    background-color: var(--dark-color);
+    background-color: var(--secondary-color);
     padding: 0 1rem;
 }
 
@@ -23,7 +23,7 @@ a {
 }
 
 a:hover {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 h1,
@@ -56,7 +56,7 @@ main>.container {
 }
 
 .jsIcon {
-    color: rgb(233, 233, 14);
+    color: #e9e90e;
 }
 
 .htmlIcon {
@@ -64,11 +64,11 @@ main>.container {
 }
 
 .cssIcon {
-    color: rgb(0, 140, 187);
+    color: #008cbb;
 }
 
 .checklist>li i {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 code[class*="language-"],
@@ -83,5 +83,5 @@ pre[class*="language-"] {
 }
 
 .btnBgc {
-    background-color: #f2a22c;
+    background-color: var(--secondary-color);
 }

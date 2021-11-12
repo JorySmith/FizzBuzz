@@ -65,7 +65,7 @@
                 <!-- App Name, Description, and Instructions -->
                 <div class="col col-lg-5 border-end border-2">
                     <h1>FizzBuzz: A Coding Project</h1>
-                    <p class="lead">A program that loops through 0 to 100 checking to see if each number is a multiple
+                    <p class="lead">A program that loops through 1 to 100 checking to see if each number is a multiple
                         or not of one or both of two user supplied numbers, for example "3" and "5", and displaying
                         either the looped number, <strong>"Fizz"</strong>, <strong>"Buzz"</strong>, or
                         <strong>"FizzBuzz"</strong> depending on which conditions are met.
@@ -92,7 +92,7 @@
                     </form>
                     <!-- Button to Run Program -->
                     <div class="col d-flex justify-content-end mt-3">
-                        <button class="btn btnBgc text-light fw-bold p-2">Start Program</button>
+                        <button id="startButton" class="btn btnBgc text-light fw-bold p-2">Start Program</button>
                     </div>
                     <!-- Display Results -->
                     <h3 class="border-bottom border-2 mt-4">Results</h3>
@@ -137,6 +137,9 @@
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
     <script src="js/site.js"></script>
+    <script>
+        document.getElementById("startButton").addEventListener("click", getUserInputs);
+    </script>
 
 </body>
 
