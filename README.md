@@ -1,4 +1,4 @@
-# Project Name - A Coding Project
+# FizzBuzz - A Coding Project
 Exec summary.
 
 # Live Demo
