@@ -1,45 +1,81 @@
 // Get user inputs for Fizz and Buzz
 function getUserInputs() {
-    let fizzNumber = document.getElementById("fizzNumber");
-    let buzzNumber = document.getElementById("buzzNumber");
-    let conditionalCheck = conditionalCheckOfInputs(fizzNumber, buzzNumber)
+    let fizzNumber = document.getElementById("fizzNumber").value;
+    let buzzNumber = document.getElementById("buzzNumber").value;
+
+    // Convert input values to numbers
+    let fizzValue = parseInt(fizzNumber);
+    let buzzValue = parseInt(buzzNumber);
+
+    // Ensure values are integers and not decimals
+    if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
+
+        // Call conditionalCofInputs 
+        let finalFizzBuzzArray = conditionalCheckOfInputs(fizzValue, buzzValue);
+
+        // Call displayResults() to display results in the DOM
+        displayResults(finalFizzBuzzArray);
+    } else {
+        alert("Please only use integers")
+    }    
 }
 
 // Logic
-// Loop through 0 to 100 with for loop
-// See if each number is a multiple of 1) Fizz only 2) Buzz only 3) Both 4) Neither
-function conditionalCheckOfInputs(fizzNumber, buzzNumber) {
-    for (let i = 1; i <= 100; i++) {
-        
-        // Multiple of Both check
-        if (i % fizzNumber == 0 && i % buzzNumber == 0) {
-            // Replace number with "FizzBuzz" string
+// Loop through 1 to 100 with a for loop
+// See if each value is divisible by 1- Fizz only 2- Buzz only 3- Both or 4- Neither
+function conditionalCheckOfInputs(fizzValue, buzzValue) {
+    // Initialize return array
+    let fizzBuzzArray = [];
 
-            i++
-            continue
-        }
-        // Multiple of Fizz only check   
-        if (i % fizzNumber == 0 && i % buzzNumber == 0) {
-            // Replace number with "Fizz" string
-            i++
-            continue
-        }
-        // Multiple of Buzz only check  
-        if (i % fizzNumber == 0 && i % buzzNumber == 0) {
-            // Replace number with "Buzz" string
-            i++
-            continue
-        }
-         // Number met none of the above conditions, therefore, it's a multiple of neither
-         // Send number
-         i++
-         continue
-        }        
-    }
-}
-
+    // For loop from 1 - 100
+    for (let i = 1; i <= 100; i++) {        
+        // Current value divisible by Both check
+        if (i % fizzValue == 0 && i % buzzValue == 0) {
+            // Push "FizzBuzz" to fizzBuzzArray
+            fizzBuzzArray.push("FizzBuzz");            
+        } else if (i % fizzValue == 0) { // Divisible by Fizz only check
+            // Push "Fizz" to fizzBuzzArray
+            fizzBuzzArray.push("Fizz");   
+        } else if (i % buzzValue == 0) {  // Divisible by Buzz only check  
+            // Push "Buzz" to fizzBuzzArray
+            fizzBuzzArray.push("Buzz");         
+        } else {
+            // Value is not divisible by fizz or buzz
+            // Send value
+            fizzBuzzArray.push(i);
+        }       
+    }           
+    return fizzBuzzArray;
+}      
 
 // Display tabular results in the DOM
-function displayResults() {
+// Loop over finalFizzBuzzArray and create a tableRow for each item
+// Create template HTML of a table row with 5 TDs
+function displayResults(finalFizzBuzzArray) {
+    // Get results table from the DOM
+    let resultsTable = document.getElementById("results");
 
+    // Get the template row from the DOM
+    let templateRow = document.getElementById("fbTemplate");
+
+    // Clear table first, always start fresh 
+    resultsTable.innerHTML= "";
+
+    // Use a for loop to iterate over finalFizzBuzzArray in increments of 5
+    //     
+    for (let index = 0; index < finalFizzBuzzArray.length; index += 5) {       
+        // Get document fragment to modify and insert in the table results
+        let tableRow = document.importNode(templateRow.content, true);
+
+        // Get the TDs and put into an array so the length can be grabbed
+        let rowCols = tableRow.querySelectorAll("td");
+        rowCols[0].textContent = finalFizzBuzzArray[index];
+        rowCols[1].textContent = finalFizzBuzzArray[index + 1];
+        rowCols[2].textContent = finalFizzBuzzArray[index + 2];
+        rowCols[3].textContent = finalFizzBuzzArray[index + 3];
+        rowCols[4].textContent = finalFizzBuzzArray[index + 4];
+
+        // Append rowCols to the resultsTable
+        resultsTable.appendChild(tableRow);
+    }
 }
