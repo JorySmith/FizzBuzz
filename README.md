@@ -1,8 +1,10 @@
 # FizzBuzz - A Coding Project
-Exec summary.
+A JavaScript coding exercise using loops, functions, booleans, and conditional statements.
 
 # Live Demo
 https://jorysmith.github.io/FizzBuzz/
 
 # Description
-Description here.
+This program loops through 0 to 100, displays "Fizz" if the number is a multiple of 3, "Buzz" if the number is a multiple of 5, or simply the number if neither of those conditions are met.
+
+
