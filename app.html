@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: By Jory Smith</title>
+    <title>FizzBuzz: By Jory Smith</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -61,7 +61,50 @@
     <!-- Main Section -->
     <main class="flex-shrink-0">
         <div class="container mt-5">
-
+            <div class="row row-cols-1 row-cols-lg-2">
+                <!-- App Name, Description, and Instructions -->
+                <div class="col col-lg-5 border-end border-2">
+                    <h1>FizzBuzz: A Coding Project</h1>
+                    <p class="lead">A program that loops through 0 to 100 checking to see if each number is a multiple
+                        or not of one or both of two user supplied numbers, for example "3" and "5", and displaying
+                        either the looped number, <strong>"Fizz"</strong>, <strong>"Buzz"</strong>, or
+                        <strong>"FizzBuzz"</strong> depending on which conditions are met.
+                    </p>
+                    <p>If a looped number is a multiple of the first input number, "3", the program will display
+                        <strong>"Fizz"</strong>. If the looped number is a multiple of "5", the program will display
+                        <strong>"Buzz"</strong>. If
+                        the number is a multiple of "3" and "5", <strong>"FizzBuzz"</strong> will be displayed. If the
+                        number isn't a multiple of either "3" and "5", simply the number will be displayed.</p>
+                    <h2>Instructions</h2>
+                    <p>Please enter two values: one assigned to "Fizz", and one assigned to "Buzz". Click the "Start Program" button when ready.</p>
+                </div>
+                <!-- User Input, Button, and Results -->
+                <div class="col col-lg-7">
+                    <!-- Inputs for Fizz and Buzz -->
+                    <h3>Enter Fizz and Buzz Values:</h3>
+                    <form class="row">
+                        <div class="col">
+                            <input id="fizzNumber" type="number" class="form-control">
+                        </div>
+                        <div class="col">
+                            <input id="buzzNumber" type="number" class="form-control">
+                        </div>
+                    </form>
+                    <!-- Button to Run Program -->
+                    <div class="col d-flex justify-content-end mt-3">
+                        <button class="btn btnBgc text-light fw-bold p-2">Start Program</button>
+                    </div>
+                    <!-- Display Results -->
+                    <h3 class="border-bottom border-2 mt-4">Results</h3>
+                    <div class="col">
+                        <table class="table table-striped">
+                            <tbody>
+                                <!-- Insert Results Here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <!-- Footer Section -->

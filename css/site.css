@@ -1,6 +1,6 @@
 :root {
     --primary-color: #1d5888;
-    --secondary-color: #ff993b;
+    --secondary-color: #f2a22c;
     --dark-color: #292929;
     --white-color: #ffffff;
 }
@@ -80,4 +80,8 @@ pre[class*="language-"] {
 
 .code-title {
     margin-top: 2rem;
+}
+
+.btnBgc {
+    background-color: #f2a22c;
 }
