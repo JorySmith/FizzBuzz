@@ -65,16 +65,13 @@
                 <!-- App Name, Description, and Instructions -->
                 <div class="col col-lg-5 border-end border-2">
                     <h1>FizzBuzz: A Coding Project</h1>
-                    <p class="lead">A program that loops through 1 to 100 checking to see if each number is a multiple
-                        or not of one or both of two user supplied numbers, for example "3" and "5", and displaying
-                        either the looped number, <strong>"Fizz"</strong>, <strong>"Buzz"</strong>, or
-                        <strong>"FizzBuzz"</strong> depending on which conditions are met.
+                    <p class="lead">This program loops through 1 to 100, displays <strong>"Fizz"</strong> if the number
+                        is divisible by 3, <strong>"Buzz"</strong> if
+                        divisible by 5, <strong>"FizzBuzz"</strong> if divisible by both 3 and 5, or simply
+                        the number if none of these conditions are met.
                     </p>
-                    <p>If a looped number is a multiple of the first input number, "3", the program will display
-                        <strong>"Fizz"</strong>. If the looped number is a multiple of "5", the program will display
-                        <strong>"Buzz"</strong>. If
-                        the number is a multiple of "3" and "5", <strong>"FizzBuzz"</strong> will be displayed. If the
-                        number isn't a multiple of either "3" and "5", simply the number will be displayed.</p>
+                    <p>The results are placed in a table and injected into the DOM, specifically the "Results" section. "Fizz" entries are assigned green color text, "Buzz"  entries are assigned blue, and "FizzBuzz" entries are assigned red.
+                    </p>
                     <h2>Instructions</h2>
                     <p>Please enter two values: one assigned to "Fizz", and one assigned to "Buzz". Click the "Start
                         Program" button when ready.</p>
@@ -138,6 +135,7 @@
         </div>
     </footer>
 
+    <!-- Create table row template document fragment node to be used by JS -->
     <template id="fbTemplate">
         <tr>
             <td></td>

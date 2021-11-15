@@ -52,10 +52,10 @@ function conditionalCheckOfInputs(fizzValue, buzzValue) {
 // Loop over finalFizzBuzzArray and create a tableRow for each item
 // Create template HTML of a table row with 5 TDs
 function displayResults(finalFizzBuzzArray) {
-    // Get results table from the DOM
+    // Get and store results table from the HTML DOM
     let resultsTable = document.getElementById("results");
 
-    // Get the template row from the DOM
+    // Get and store the template row doc fragment from the HTML DOM
     let templateRow = document.getElementById("fbTemplate");
 
     // Clear table first, always start fresh 
@@ -64,15 +64,27 @@ function displayResults(finalFizzBuzzArray) {
     // Use a for loop to iterate over finalFizzBuzzArray in increments of 5
     //     
     for (let index = 0; index < finalFizzBuzzArray.length; index += 5) {       
-        // Get document fragment to modify and insert in the table results
+        // Get and store document fragment template 
         let tableRow = document.importNode(templateRow.content, true);
 
-        // Get the TDs and put into an array so the length can be grabbed
+        // Get and store the TDs from the document fragment        
         let rowCols = tableRow.querySelectorAll("td");
+        
+        // Add classList of finalFizzBuzzArray to each TD 
+        // Modify each TD textContent to equal each finalFizzBuzzArray item, doing a row of 5 items at a time
+        rowCols[0].classList.add(finalFizzBuzzArray[index])
         rowCols[0].textContent = finalFizzBuzzArray[index];
+        
+        rowCols[1].classList.add(finalFizzBuzzArray[index + 1])
         rowCols[1].textContent = finalFizzBuzzArray[index + 1];
+
+        rowCols[2].classList.add(finalFizzBuzzArray[index + 2])
         rowCols[2].textContent = finalFizzBuzzArray[index + 2];
+
+        rowCols[3].classList.add(finalFizzBuzzArray[index + 3])
         rowCols[3].textContent = finalFizzBuzzArray[index + 3];
+
+        rowCols[4].classList.add(finalFizzBuzzArray[index + 4])
         rowCols[4].textContent = finalFizzBuzzArray[index + 4];
 
         // Append rowCols to the resultsTable

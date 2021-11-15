@@ -71,17 +71,36 @@ main>.container {
     color: var(--primary-color);
 }
 
-code[class*="language-"],
-pre[class*="language-"] {
-    white-space: pre-wrap;
-    word-break: break-all;
-    word-wrap: break-word;
-}
-
 .code-title {
     margin-top: 2rem;
 }
 
 .btnBgc {
     background-color: var(--secondary-color);
+}
+
+.lead {
+    color: black;
+}
+
+.Fizz {
+    color: green;
+    font-weight: bold;
+}
+
+.Buzz {
+    color: blue;
+    font-weight: bold;
+}
+
+.FizzBuzz {
+    color: red;
+    font-weight: bold;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
 }
